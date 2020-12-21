@@ -21,22 +21,14 @@ w.reverse()
 
 #to convert the decimal part
 d=[]
-for i in range(4):
-  if man>1:
-    man=str(man)
-    a,b=man.split(".")
-    man=float(b)
-    while man>1:
-      man/=10
-    dig=int(man*2)
+for i in range(10):
+  if man>0:
+    temp=man*2
+    dig=int(temp)
     d.append(dig)
-    man=float(man*2)
-  elif man==0 or man==1:
+    man=temp-dig
+  else :
     break
-  else:
-    dig=int(man*2)
-    d.append(dig)
-    man=float(man*2)
 #to print the value
 for i in w:
     print(i,end="")
